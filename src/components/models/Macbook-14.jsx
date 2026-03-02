@@ -30,8 +30,10 @@ export default function MacbookModel14(props) {
     "/models/macbook-14-transformed.glb",
   );
 
-  const texture = useTexture("/screen.png");
-
+  const texture = useTexture("/screen.png", (tex) => {
+    tex.colorSpace = SRGBColorSpace;
+    tex.needsUpdate = true;
+  });
   useEffect(() => {
     scene.traverse((child) => {
       if (child.isMesh) {

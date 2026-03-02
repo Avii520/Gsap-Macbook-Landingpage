@@ -20,7 +20,10 @@ export default function MacbookModel16(props) {
     "/models/macbook-16-transformed.glb",
   );
 
-  const texture = useTexture("/screen.png");
+  const texture = useTexture("/screen.png", (tex) => {
+    tex.colorSpace = SRGBColorSpace;
+    tex.needsUpdate = true;
+  });
 
   useEffect(() => {
     scene.traverse((child) => {
