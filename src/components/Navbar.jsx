@@ -1,7 +1,6 @@
-import React from "react";
 import { navLinks } from "../constants";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <header>
       <nav>
@@ -14,6 +13,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
         <div className="flex-center gap-3">
           <button>
             <img src="/search.svg" alt="Search" />
@@ -26,5 +26,4 @@ const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;
+export default NavBar;
